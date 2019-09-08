@@ -1,6 +1,16 @@
 # **Design** Considerations and Decisions
 
-**Note:** `protobuf` and `pb` interchangeably refer to the same thing, i.e. protocol buffers object.
+**Note:**  `protobuf` and `pb` interchangeably refer to the same thing, i.e. protocol buffers object.
+
+## Motivation
+
+I ask myself this now and then, so once for all, I'm putting it **down** in *mark____*.  ;P
+
+- Working with `protobuf` should be simple, i.e. the message objects should work like any other python objects. They don't! (specifically, getting and setting values)
+- Tensorflow Serving documentation doesn't cover [gRPC client API](https://github.com/tensorflow/serving/tree/master/tensorflow_serving/apis), and there is little available, mostly sparse, reference for implementing the gRPC clients for TensorFlow Serving.
+- If it ain't broke, don't fix it, improve it.
+
+The repo started as a by-product of working with Tensorflow Serving, mostly focusing on implementing a distributed serving mechanism for all models [Tensorflow](https://www.tensorflow.org/) and otherwise.
 
 ## Guidelines:
 
