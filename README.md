@@ -1,12 +1,10 @@
 # Simple TensorFlow Serving Client
 
-## What's is it?
-
 A simple, consolidated, extensible [gRPC](https://grpc.io/)-based client implementation for querying a hosted `tensorflow_model_server`.
 
 **What it does do?**
 
-It simplifies working with [protocol buffers](https://developers.google.com/protocol-buffers/) and provides custom functions for working with protocol buffer definitions, i.e. messages and services inside [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving) , all without leaving the comfort of python. 
+It simplifies working with [protocol buffers](https://developers.google.com/protocol-buffers/) and provides custom functions for working with `protobuf` APIs (i.e. messages and services) inside [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving) , all without leaving the comfort of python. 
 
 Implements gRPC client stubs for `GetModelMetadata`, `GetModelStatus`, `HandleReloadConfig` and `Predict` APIs. 
 
@@ -14,25 +12,19 @@ Implements gRPC client stubs for `GetModelMetadata`, `GetModelStatus`, `HandleRe
 
 It doesn't completely abstract away working with protocol buffers. The internal protocol buffer can still be accessed and manipulated using methods specific to protocol buffers. This is preferred when working with gRPC clients that expect raw protocol buffers.
 
-## Motivation
+For a more detailed reference, [click here](/docs/DESIGN.md).
 
-I ask myself this now and then, so once for all, I'm putting it **down** in *mark____*.  ;P
+## Installation
 
-- Working with `protobuf` should be simple, i.e. the message objects should work like any other python objects. They don't! (specifically, getting and setting values)
-- Tensorflow Serving documentation doesn't cover [gRPC client API](https://github.com/tensorflow/serving/tree/master/tensorflow_serving/apis), and there is little available, mostly sparse, reference for implementing the gRPC clients for TensorFlow Serving.
-- If it ain't broke, don't fix it, improve it.
-
-The repo started as a by-product of working with Tensorflow Serving, mostly focusing on implementing a distributed serving mechanism for all models [Tensorflow](https://www.tensorflow.org/) and otherwise.
-
-## How to start using it?
-
-### Install this client:
+### Client
 
 ```bash
-pip install <>
+pip install git+https://github.com/jagans94/stfsclient.git
 ```
 
-### Install `tensorflow_model_server` server on Debian/Ubuntu:
+### `tensorflow_model_server` 
+
+#### Debian/Ubuntu
 
 **Note:** Run as `sudo`
 
@@ -43,9 +35,15 @@ apt update
 apt-get install tensorflow-model-server
 ```
 
-### Tutorial:
+#### Docker
 
-[Usage](https://github.com/jagans94/stfsclient/blob/master/extras/tutorial/tutorial.ipynb)
+```bash
+TBD
+```
+
+## Tutorial
+
+Refer here for the most up-to-date [tutorial.](./extras/tutorial/tutorial.ipynb)
 
 ## Benchmarks
 
@@ -53,7 +51,7 @@ apt-get install tensorflow-model-server
 
 gRPC predict requests have a lot smaller latency profile (approx. 6 times faster) when compared with REST based requests on MNIST data set! :)
 
-**Note:** Code for bench marking can be found at  [extras/benchmarks](https://github.com/jagans94/stfsclient/tree/master/extras/benchmarks)
+**Note:** Code for bench marking can be found at  [extras/benchmarks.](./extras/benchmarks)
 
 ## To Do
 
