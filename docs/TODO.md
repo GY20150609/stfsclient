@@ -1,6 +1,6 @@
 ## To Do
 
-The basic implementation is almost complete. However, there are some add-ons that would be well worth expanding on, such as:
+The basic implementation is almost complete. However, there are some add-ons that would be well worth expanding on. Here are some:
 
 ### General
 

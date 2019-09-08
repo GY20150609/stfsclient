@@ -12,7 +12,7 @@ Implements gRPC client stubs for `GetModelMetadata`, `GetModelStatus`, `HandleRe
 
 It doesn't completely abstract away working with protocol buffers. The internal protocol buffer can still be accessed and manipulated using methods specific to protocol buffers. This is preferred when working with gRPC clients that expect raw protocol buffers.
 
-For a more detailed reference, [click here](/docs/DESIGN.md).
+For a more detailed reference, [click here](./docs/DESIGN.md).
 
 ## Installation
 
@@ -24,9 +24,7 @@ pip install git+https://github.com/jagans94/stfsclient.git
 
 ### `tensorflow_model_server` 
 
-#### Debian/Ubuntu
-
-**Note:** Run as `sudo`
+**Note:** Run as `sudo`; only works on Debian/Ubuntu
 
 ```bash
 echo "deb http://storage.googleapis.com/tensorflow-serving-apt stable tensorflow-model-server tensorflow-model-server-universal" | tee /etc/apt/sources.list.d/tensorflow-serving.list && \
@@ -37,7 +35,7 @@ apt-get install tensorflow-model-server
 
 ## Tutorial
 
-Refer here for the most up-to-date [tutorial.](./extras/tutorial/tutorial.ipynb)
+Refer here for the most up-to-date [tutorial.](./extras/tutorial)
 
 ## Benchmarks
 
@@ -49,4 +47,5 @@ gRPC predict requests have a lot smaller latency profile (approx. 6 times faster
 
 ## Contributions
 
-Want to add a feature that's not in here or implement [one of these](docs/TODO.md) above. Raise an **Issue** or better yet **PR**. ;)
+Want to add a feature that's not in here or implement [one of these](./docs/TODO.md). Raise an **Issue** or better yet **PR**. ;)
+
