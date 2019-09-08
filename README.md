@@ -45,15 +45,15 @@ apt-get install tensorflow-model-server
 
 ### Tutorial:
 
-[Usage](https://github.com/jagans94/top-secret-lmao/blob/master/tests/test_services_functionalities.ipynb)
+[Usage](https://github.com/jagans94/stfsclient/blob/master/extras/tutorial/tutorial.ipynb)
 
 ## Benchmarks
 
- ![](https://github.com/jagans94/top-secret-lmao/blob/master/tests/latency-comp-mnist.png)
+ ![](https://github.com/jagans94/stfsclient/blob/master/docs/latency_profile_mnist.png)
 
 gRPC predict requests have a lot smaller latency profile (approx. 6 times faster) when compared with REST based requests on MNIST data set! :)
 
-**Note:** Code for bench marking can be found at  [tests/comparison_http_vs_grpc_prediction_request_response.ipynb](https://github.com/jagans94/top-secret-lmao/blob/master/tests/comparison_http_vs_grpc_prediction_request_response.ipynb)
+**Note:** Code for bench marking can be found at  [extras/benchmarks](https://github.com/jagans94/stfsclient/tree/master/extras/benchmarks)
 
 ## To Do
 
