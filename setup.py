@@ -14,8 +14,8 @@ setup(
     extras_require={
         'dev':  ["tensorflow>=1.13.1, <=2.0",
                  "jupyterlab==1.0.5"],
-    }
-    python_requires='>=3.6',
+    },
+    python_requires='>=3.5, <4',
 
     license='MIT',
     description='A simple, consolidated, extensible gRPC-based client implementation \
