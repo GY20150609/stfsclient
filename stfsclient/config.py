@@ -1,9 +1,9 @@
 import grpc
-from tensorflow_serving.config import model_server_config_pb2
-from tensorflow_serving.config import logging_config_pb2
+from stfsclient.tensorflow_serving.config import model_server_config_pb2
+from stfsclient.tensorflow_serving.config import logging_config_pb2
 
-from base import Message, MessageList, GRPCService
-from sources import ServableVersionPolicy
+from stfsclient.base import Message, MessageList, GRPCService
+from stfsclient.sources import ServableVersionPolicy
 
 class ModelConfig(Message):
     def __init__(self, name=None, base_path=None, model_platform=None,

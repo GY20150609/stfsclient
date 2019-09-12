@@ -1,6 +1,6 @@
-from tensorflow_serving.util import status_pb2
+from stfsclient.tensorflow_serving.util import status_pb2
 
-from base import Message
+from stfsclient.base import Message
 
 class Status(Message):
     def __init__(self, error_code=None, error_message=None, **kwargs):

@@ -19,7 +19,7 @@ NOTE: Adapted from TensorFlow library.
 import numpy as np
 from six.moves import builtins
 
-from tensorflow.core.framework import types_pb2
+from stfsclient.tensorflow.core.framework import types_pb2
 # from tensorflow.python import pywrap_tensorflow
 
 # Comment out _np_bfloat16 
