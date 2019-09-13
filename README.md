@@ -4,9 +4,9 @@ A simple, consolidated, extensible [gRPC](https://grpc.io/)-based client impleme
 
 **What it does do?**
 
-It simplifies working with [protocol buffers](https://developers.google.com/protocol-buffers/) and provides custom functions for working with `protobuf` APIs (i.e. messages and services) inside [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving) , all without leaving the comfort of python. 
+It simplifies working with [protocol buffers](https://developers.google.com/protocol-buffers/) and provides custom functions for working with `protobuf` APIs (i.e. messages and services) inside [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving), all without leaving the comfort of python. 
 
-Implements gRPC client stubs for `GetModelMetadata`, `GetModelStatus`, `HandleReloadConfig` and `Predict` APIs. 
+Implements gRPC client stubs for `GetModelMetadata`, `GetModelStatus`, `HandleReloadConfig` and `Predict` APIs (more to come, including some custom ones).
 
 **What it doesn't do?**
 

@@ -17,8 +17,8 @@ Helper classes for tensor shape inference.
 NOTE: Adapted from TensorFlow library.
 """
 
-from tensorflow.core.framework import tensor_shape_pb2
-from tensorflow.python.framework import dtypes
+from stfsclient.tensorflow.core.framework import tensor_shape_pb2
+from stfsclient.tensorflow.python.framework import dtypes
 
 class Dimension(object):
 	"""Represents the value of one dimension in a TensorShape."""

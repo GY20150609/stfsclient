@@ -4,7 +4,7 @@ try:
 	# Tensorflow implementation
 	_TENSORFLOW_AVAILABLE = True
 except ImportError:
-	from tensorflow.python.framework.tensor_util import MakeTensorProto, MakeNdarray
+	from stfsclient.tensorflow.python.framework.tensor_util import MakeTensorProto, MakeNdarray
 	# Internal implementation
 	_TENSORFLOW_AVAILABLE = False
 

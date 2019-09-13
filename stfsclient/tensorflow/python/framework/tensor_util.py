@@ -18,9 +18,9 @@ NOTE: Adapted from TensorFlow library.
 
 import numpy as np
 
-from tensorflow.core.framework import tensor_pb2
-from tensorflow.python.framework import dtypes
-from tensorflow.python.framework import tensor_shape
+from stfsclient.tensorflow.core.framework import tensor_pb2
+from stfsclient.tensorflow.python.framework import dtypes
+from stfsclient.tensorflow.python.framework import tensor_shape
 
 _TENSOR_CONTENT_TYPES = frozenset([
 	dtypes.float32, dtypes.float64, dtypes.int32, dtypes.uint8, dtypes.int16,
