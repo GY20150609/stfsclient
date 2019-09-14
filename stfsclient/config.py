@@ -1,6 +1,6 @@
 import grpc
-from stfsclient.tensorflow_serving.config import model_server_config_pb2
-from stfsclient.tensorflow_serving.config import logging_config_pb2
+from stfsclient.tensorflow_serving import model_server_config_pb2
+from stfsclient.tensorflow_serving import logging_config_pb2
 
 from stfsclient.base import Message, MessageList, GRPCService
 from stfsclient.sources import ServableVersionPolicy

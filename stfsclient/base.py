@@ -66,7 +66,7 @@ class Message(object):
             return obj._protobuf
         return obj
 
-
+# TODO: Improve GRPC support
 class GRPCService(object):
     def __init__(self, server, **kwargs):
         self.channel = self.create_insecure_channel(server)
@@ -75,7 +75,7 @@ class GRPCService(object):
         return grpc.insecure_channel(server)
 
 
-# A container class for a list of messages
+# A container class for a list of `Message` instances.
 class MessageList(Message):
     def __init__(self, protobuf, wrapper, **kwargs):
         super().__init__(protobuf, **kwargs)

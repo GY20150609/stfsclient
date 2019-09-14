@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='stfsclient',
-    version='1.0.1.a4',
+    version='1.0.1.a5',
     url='https://github.com/jagans94/stfsclient',
     
     author='Jagan Seshadri',
@@ -16,13 +16,14 @@ setup(
                  "jupyterlab==1.0.5"],
         'vis':  ["matplotlib"],
     },
-    python_requires='>=3.5, <4',
+    python_requires='>=3.5, <3.8',
 
     license='MIT',
-    description='A simple, consolidated, extensible gRPC-based client implementation \
+    description='A simple, consolidated gRPC-based client implementation \
         for querying a hosted `tensorflow_model_server`.',
-    long_description=open('README.md').read(),
-    long_description_content_type='text/markdown',
+    # TODO: Change long_description/[_type]
+    #long_description=open('README.md').read(),
+    #long_description_content_type='text/markdown',
     keywords = 'grpc, protobuf, tensorflow serving, client',
 
     classifiers = [

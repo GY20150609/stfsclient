@@ -1,4 +1,4 @@
-from stfsclient.tensorflow_serving.sources.storage_path import file_system_storage_path_source_pb2
+from stfsclient.tensorflow_serving import file_system_storage_path_source_pb2
 
 from stfsclient.base import Message
 
