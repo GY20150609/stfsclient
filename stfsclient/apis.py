@@ -1,5 +1,5 @@
 import grpc
-from .tensorflow_serving import model_pb2
+from stfsclient.tensorflow_serving import model_pb2
 from stfsclient.tensorflow_serving import get_model_metadata_pb2, predict_pb2
 from stfsclient.tensorflow_serving import get_model_status_pb2, model_management_pb2
 
@@ -9,7 +9,7 @@ from stfsclient.tensorflow_serving import model_service_pb2_grpc
 from stfsclient.base import Message, GRPCService
 from stfsclient.config import ModelConfig, ModelConfigList
 from stfsclient.util import Status
-# from stfsclient.tf_utils import _make_tensor_proto, _make_ndarray
+from stfsclient.tf_utils import make_tensor_proto, make_ndarray
 
 
 class ModelSpec(Message):

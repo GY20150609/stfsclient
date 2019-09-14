@@ -1,6 +1,6 @@
 # Simple TensorFlow Serving Client
 
-A simple, consolidated, extensible [gRPC](https://grpc.io/)-based client implementation for querying a hosted `tensorflow_model_server`.
+A simple, consolidated [gRPC](https://grpc.io/)-based client wrapper for querying a hosted `tensorflow_model_server`.
 
 **What it does do?**
 
@@ -51,5 +51,5 @@ Want to add a feature that's not in here or implement [one of these](./docs/TODO
 
 ## Copyright
 
-Licensed under the MIT License; you may not use this project's files except in compliance with the License. A copy of the License is provided in the [LICENSE](./LICENSE) file in this repository.
+Copyright 2019 onward. Licensed under the MIT License; you may not use this project's files except in compliance with the License. A copy of the License is provided in the [LICENSE](./LICENSE) file in this repository.
 
