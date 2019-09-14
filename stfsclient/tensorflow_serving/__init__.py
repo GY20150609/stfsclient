@@ -15,4 +15,4 @@ else:
         from .internal import *
         _TENSORFLOW_AVAILABLE = False
 
-print('TensorFlow Available: {}'.format(_TENSORFLOW_AVAILABLE))
+print("{}, using TF: {}".format(__name__, _TENSORFLOW_AVAILABLE))
