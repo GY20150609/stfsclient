@@ -1,14 +1,7 @@
 import grpc
-<<<<<<< Updated upstream
-
-from stfsclient.tensorflow_serving.apis import model_pb2
-from stfsclient.tensorflow_serving.apis import get_model_metadata_pb2, predict_pb2
-from stfsclient.tensorflow_serving.apis import get_model_status_pb2, model_management_pb2
-=======
-from stfsclient.tensorflow_serving import model_pb2
+from .tensorflow_serving import model_pb2
 from stfsclient.tensorflow_serving import get_model_metadata_pb2, predict_pb2
 from stfsclient.tensorflow_serving import get_model_status_pb2, model_management_pb2
->>>>>>> Stashed changes
 
 from stfsclient.tensorflow_serving import prediction_service_pb2_grpc
 from stfsclient.tensorflow_serving import model_service_pb2_grpc

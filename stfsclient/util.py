@@ -1,4 +1,4 @@
-from stfsclient.tensorflow_serving.util import status_pb2
+from stfsclient.tensorflow_serving import status_pb2
 
 from stfsclient.base import Message
 
