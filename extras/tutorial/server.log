@@ -1,0 +1,96 @@
+nohup: ignoring input
+2019-09-16 00:14:30.913811: I tensorflow_serving/model_servers/server_core.cc:462] Adding/updating models.
+2019-09-16 00:14:30.913879: I tensorflow_serving/model_servers/server_core.cc:561]  (Re-)adding model: mnist
+2019-09-16 00:14:30.913891: I tensorflow_serving/model_servers/server_core.cc:561]  (Re-)adding model: fashion_model
+2019-09-16 00:14:31.014442: I tensorflow_serving/core/basic_manager.cc:739] Successfully reserved resources to load servable {name: mnist version: 1}
+2019-09-16 00:14:31.014536: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: mnist version: 1}
+2019-09-16 00:14:31.014578: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: mnist version: 1}
+2019-09-16 00:14:31.014632: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:363] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/models/mnist/1
+2019-09-16 00:14:31.014670: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:31] Reading SavedModel from: /tmp/models/mnist/1
+2019-09-16 00:14:31.016393: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:54] Reading meta graph with tags { serve }
+2019-09-16 00:14:31.018258: I external/org_tensorflow/tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-09-16 00:14:31.048848: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:202] Restoring SavedModel bundle.
+2019-09-16 00:14:31.055366: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:151] Running initialization op on SavedModel bundle at path: /tmp/models/mnist/1
+2019-09-16 00:14:31.058689: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:311] SavedModel load for tags { serve }; Status: success. Took 44012 microseconds.
+2019-09-16 00:14:31.058735: I tensorflow_serving/servables/tensorflow/saved_model_bundle_factory.cc:100] Wrapping session to perform batch processing
+2019-09-16 00:14:31.058751: I tensorflow_serving/servables/tensorflow/bundle_factory_util.cc:153] Wrapping session to perform batch processing
+2019-09-16 00:14:31.058791: I tensorflow_serving/servables/tensorflow/saved_model_warmup.cc:103] No warmup data file found at /tmp/models/mnist/1/assets.extra/tf_serving_warmup_requests
+2019-09-16 00:14:31.058885: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: mnist version: 1}
+2019-09-16 00:14:31.114317: I tensorflow_serving/core/basic_manager.cc:739] Successfully reserved resources to load servable {name: fashion_model version: 1}
+2019-09-16 00:14:31.114383: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: fashion_model version: 1}
+2019-09-16 00:14:31.114414: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: fashion_model version: 1}
+2019-09-16 00:14:31.114455: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:363] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/models/fashion_model/1
+2019-09-16 00:14:31.114477: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:31] Reading SavedModel from: /tmp/models/fashion_model/1
+2019-09-16 00:14:31.117740: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:54] Reading meta graph with tags { serve }
+2019-09-16 00:14:31.127508: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:202] Restoring SavedModel bundle.
+2019-09-16 00:14:31.147411: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:311] SavedModel load for tags { serve }; Status: success. Took 32929 microseconds.
+2019-09-16 00:14:31.147455: I tensorflow_serving/servables/tensorflow/saved_model_bundle_factory.cc:100] Wrapping session to perform batch processing
+2019-09-16 00:14:31.147471: I tensorflow_serving/servables/tensorflow/bundle_factory_util.cc:153] Wrapping session to perform batch processing
+2019-09-16 00:14:31.147510: I tensorflow_serving/servables/tensorflow/saved_model_warmup.cc:103] No warmup data file found at /tmp/models/fashion_model/1/assets.extra/tf_serving_warmup_requests
+2019-09-16 00:14:31.147643: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: fashion_model version: 1}
+2019-09-16 00:14:31.149561: I tensorflow_serving/model_servers/server.cc:324] Running gRPC ModelServer at 0.0.0.0:8500 ...
+2019-09-16 00:14:31.150303: I tensorflow_serving/model_servers/server.cc:344] Exporting HTTP/REST API at:localhost:8501 ...
+[evhttp_server.cc : 239] RAW: Entering the event loop ...
+2019-09-16 00:14:49.728091: I tensorflow_serving/model_servers/model_service_impl.cc:47] 
+Config entry
+	index : 0
+	path : /tmp/models/mnist
+	name : mnist
+	platform : tensorflow
+2019-09-16 00:14:49.728162: I tensorflow_serving/model_servers/server_core.cc:462] Adding/updating models.
+2019-09-16 00:14:49.728177: I tensorflow_serving/model_servers/server_core.cc:561]  (Re-)adding model: mnist
+2019-09-16 00:14:49.731998: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: fashion_model version: 1}
+2019-09-16 00:14:49.732064: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: fashion_model version: 1}
+2019-09-16 00:14:49.732077: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: fashion_model version: 1}
+2019-09-16 00:14:49.734373: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 275878
+2019-09-16 00:14:49.734420: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: fashion_model version: 1}
+2019-09-16 00:14:49.932432: I tensorflow_serving/core/basic_manager.cc:739] Successfully reserved resources to load servable {name: mnist version: 2}
+2019-09-16 00:14:49.932523: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: mnist version: 2}
+2019-09-16 00:14:49.932563: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: mnist version: 2}
+2019-09-16 00:14:49.932619: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:363] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/models/mnist/2
+2019-09-16 00:14:49.932651: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:31] Reading SavedModel from: /tmp/models/mnist/2
+2019-09-16 00:14:49.934325: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:54] Reading meta graph with tags { serve }
+2019-09-16 00:14:49.939119: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:202] Restoring SavedModel bundle.
+2019-09-16 00:14:49.952595: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:151] Running initialization op on SavedModel bundle at path: /tmp/models/mnist/2
+2019-09-16 00:14:49.962135: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:311] SavedModel load for tags { serve }; Status: success. Took 29471 microseconds.
+2019-09-16 00:14:49.962250: I tensorflow_serving/servables/tensorflow/saved_model_bundle_factory.cc:100] Wrapping session to perform batch processing
+2019-09-16 00:14:49.962325: I tensorflow_serving/servables/tensorflow/bundle_factory_util.cc:153] Wrapping session to perform batch processing
+2019-09-16 00:14:49.962470: I tensorflow_serving/servables/tensorflow/saved_model_warmup.cc:103] No warmup data file found at /tmp/models/mnist/2/assets.extra/tf_serving_warmup_requests
+2019-09-16 00:14:49.962815: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: mnist version: 2}
+2019-09-16 00:14:50.032249: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: mnist version: 1}
+2019-09-16 00:14:50.032350: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: mnist version: 1}
+2019-09-16 00:14:50.032375: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: mnist version: 1}
+2019-09-16 00:14:50.033415: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 59928
+2019-09-16 00:14:50.033490: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: mnist version: 1}
+2019-09-16 00:14:57.219192: I tensorflow_serving/model_servers/model_service_impl.cc:47] 
+Config entry
+	index : 0
+	path : /tmp/models/mnist
+	name : mnist
+	platform : tensorflow
+2019-09-16 00:14:57.219305: I tensorflow_serving/model_servers/server_core.cc:462] Adding/updating models.
+2019-09-16 00:14:57.219341: I tensorflow_serving/model_servers/server_core.cc:561]  (Re-)adding model: mnist
+2019-09-16 00:14:57.940249: I tensorflow_serving/core/basic_manager.cc:739] Successfully reserved resources to load servable {name: mnist version: 1}
+2019-09-16 00:14:57.940333: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: mnist version: 1}
+2019-09-16 00:14:57.940364: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: mnist version: 1}
+2019-09-16 00:14:57.940408: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:363] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/models/mnist/1
+2019-09-16 00:14:57.940431: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:31] Reading SavedModel from: /tmp/models/mnist/1
+2019-09-16 00:14:57.941813: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:54] Reading meta graph with tags { serve }
+2019-09-16 00:14:57.946499: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:202] Restoring SavedModel bundle.
+2019-09-16 00:14:57.959740: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:151] Running initialization op on SavedModel bundle at path: /tmp/models/mnist/1
+2019-09-16 00:14:57.967229: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:311] SavedModel load for tags { serve }; Status: success. Took 26790 microseconds.
+2019-09-16 00:14:57.967298: I tensorflow_serving/servables/tensorflow/saved_model_bundle_factory.cc:100] Wrapping session to perform batch processing
+2019-09-16 00:14:57.967335: I tensorflow_serving/servables/tensorflow/bundle_factory_util.cc:153] Wrapping session to perform batch processing
+2019-09-16 00:14:57.967421: I tensorflow_serving/servables/tensorflow/saved_model_warmup.cc:103] No warmup data file found at /tmp/models/mnist/1/assets.extra/tf_serving_warmup_requests
+2019-09-16 00:14:57.967618: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: mnist version: 1}
+2019-09-16 00:16:15.308034: I tensorflow_serving/model_servers/server_core.cc:462] Adding/updating models.
+2019-09-16 00:16:15.322572: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: mnist version: 1}
+2019-09-16 00:16:15.322626: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: mnist version: 1}
+2019-09-16 00:16:15.322639: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: mnist version: 1}
+2019-09-16 00:16:15.323187: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 59928
+2019-09-16 00:16:15.323226: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: mnist version: 1}
+2019-09-16 00:16:15.422710: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: mnist version: 2}
+2019-09-16 00:16:15.422825: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: mnist version: 2}
+2019-09-16 00:16:15.422868: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: mnist version: 2}
+2019-09-16 00:16:15.424628: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 59928
+2019-09-16 00:16:15.424740: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: mnist version: 2}
