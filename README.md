@@ -4,17 +4,13 @@ A simple, consolidated [gRPC](https://grpc.io/)-based client wrapper for queryin
 
 **What it does?**
 
-It simplifies working with [protocol buffers](https://developers.google.com/protocol-buffers/) and provides custom functions for working with `protobuf` APIs (i.e. messages and services) inside [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving), all without leaving the comfort of python. 
+- It simplifies working with [protocol buffers](https://developers.google.com/protocol-buffers/) and provides custom functions for working with `protobuf` APIs (i.e. messages and services) inside [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving), all without leaving the comfort of python. 
 
-Implements gRPC client stubs for `GetModelMetadata`, `GetModelStatus`, `HandleReloadConfig` and `Predict` APIs (more to come, including some custom ones).
+- Implements gRPC client stubs for `GetModelMetadata`, `GetModelStatus`, `HandleReloadConfig` and `Predict` APIs (more to come, including some custom ones).
+
+- It requires only the minimum dependencies, i.e. numpy, grpcio, protobuf making it very light to install on memory constrained edge devices, such as [Raspberry Pi](https://www.raspberrypi.org/), [NVIDIA Jetson](https://developer.nvidia.com/embedded/jetson-nano-developer-kit), etc.
 
 For a more detailed reference, [click here](./docs/DESIGN.md).
-
-**Why use it?**
-
-By abstracting away gRPC and `protobuf` layer underneath, it greatly simplifies working with them. Secondly, it requires only the minimum dependencies, i.e. numpy, grpcio, protobuf making it very light to install on memory constrained edge devices, such as [Raspberry Pi](https://www.raspberrypi.org/), [NVIDIA Jetson](https://developer.nvidia.com/embedded/jetson-nano-developer-kit), etc.
-
-Thirdly, check [this!](#Benchmarks)
 
 ## Installation
 
@@ -47,7 +43,7 @@ apt-get install tensorflow-model-server
 
 ## Tutorial
 
-Refer here for the most up-to-date [tutorial.](./extras/tutorial)
+Refer here for the most up-to-date [tutorial.](./extras/tutorial/simple_tutorial.ipynb)
 
 ## Benchmark
 

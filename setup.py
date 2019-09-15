@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='stfsclient',
-    version='1.0.1.a5',
+    version='1.1.0',
     url='https://github.com/jagans94/stfsclient',
     
     author='Jagan Seshadri',
@@ -27,7 +27,7 @@ setup(
     keywords = 'grpc, protobuf, tensorflow serving, client',
 
     classifiers = [
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.5',
