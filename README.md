@@ -1,26 +1,38 @@
 # Simple TensorFlow Serving Client
 
-A simple, consolidated [gRPC](https://grpc.io/)-based client wrapper for querying a hosted `tensorflow_model_server`.
+A simple, consolidated [gRPC](https://grpc.io/)-based client wrapper for querying a hosted TensorFlow Model Server.
 
-**What it does do?**
+**What it does?**
 
 It simplifies working with [protocol buffers](https://developers.google.com/protocol-buffers/) and provides custom functions for working with `protobuf` APIs (i.e. messages and services) inside [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving), all without leaving the comfort of python. 
 
 Implements gRPC client stubs for `GetModelMetadata`, `GetModelStatus`, `HandleReloadConfig` and `Predict` APIs (more to come, including some custom ones).
 
-**What it doesn't do?**
-
-It doesn't completely abstract away working with protocol buffers. The internal protocol buffer can still be accessed and manipulated using methods specific to protocol buffers. This is preferred when working with gRPC clients that expect raw protocol buffers.
-
 For a more detailed reference, [click here](./docs/DESIGN.md).
+
+**Why use it?**
+
+By abstracting away gRPC and `protobuf` layer underneath, it greatly simplifies working with them. Secondly, it requires only the minimum dependencies, i.e. numpy, grpcio, protobuf making it very light to install on memory constrained edge devices, such as [Raspberry Pi](https://www.raspberrypi.org/), [NVIDIA Jetson](https://developer.nvidia.com/embedded/jetson-nano-developer-kit), etc.
+
+Thirdly, check [this!](#Benchmarks)
 
 ## Installation
 
 ### Client
 
+Clone the repository and run ;
+
+```bash
+cd stfsclient
+pip install .
+```
+or 
+
 ```bash
 pip install git+https://github.com/jagans94/stfsclient.git
 ```
+
+for just the package.
 
 ### `tensorflow_model_server` 
 
@@ -37,11 +49,13 @@ apt-get install tensorflow-model-server
 
 Refer here for the most up-to-date [tutorial.](./extras/tutorial)
 
-## Benchmarks
+## Benchmark
 
- ![](./docs/latency_profile_mnist.png)
+![](./docs/latency_profile_mnist.png)
 
-gRPC predict requests have a lot smaller latency profile (approx. 6 times faster) when compared with REST based requests on MNIST data set! :)
+​      			Prediction latency on 10,000 images with batch sizes 1, 4, 8, and 16 on MNIST data set! :) 
+
+**Conclusion:** gRPC predict requests have a lot smaller latency profile and are approx. 6 times faster compared with REST based predict requests 
 
 **Note:** Code for bench marking can be found at  [extras/benchmarks.](./extras/benchmarks)
 

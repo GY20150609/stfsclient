@@ -7,7 +7,7 @@
 ## Design Aspirations:
 
 - Provide a common name-space for invoking gRPC and REST APIs in Tensorflow Serving.
-- Create a common abstraction layer for working with protocol buffer definitions.
+- Create a common abstraction layer for working with protocol buffer definitions in TensorFlow Serving.
 
 ## Motivation
 
@@ -79,7 +79,9 @@ What's the *big* difference? Mainly *two*:
 
 This is achieved by using a simple pointer-style reference to update the parent `pb` wrapper object whenever an attribute is changed on the nested `pb` wrapper object using a `setter` method.
 
-**Psst...** *However, I personally, prefer method **A)**, because it's explicit that way. It can be argued that there's not much use for method **B)** (an immediate use case doesn't come to mind), unless you are fiddling with different values while testing, even then I think there's a better way to do that. I'll be looking into removing it in the future.*
+**Psst...** *However, I personally, prefer method **A)**, because it's more explicit that way. It can be argued that there's not much use for method **B)** , however, it allows us to set some long winded nested dependency in a single easy declaration, without having to tweak other attributes, especially while testing.*
+
+*I'll be looking into removing it in the future, if the need arises.*
 
 ## Response messages and wrappers
 
@@ -93,8 +95,12 @@ Since, `google.protobuf.message` takes care of handling most of the errors, it s
 
 IMO, letting  errors percolate with sensible warnings should be the way to go, i.e. shouldn't cause the user to go mad. 
 
+## TensorFlow Backend
+
+The library works in two different modes, i.e. internal or using Tensorflow backend. You cannot mix importing internal backend while also importing TensorFlow library, as this leads to collision in the `protobuf ` definitions shared by the two libraries. You can import the TensorFlow backend, which will prevent this at the cost of locking you into the TensorFlow implementation, i.e. relying on TensorFlow.
+
 ## Limitations
 
 1. Currently, the main limitation is in the form of chained assignment on items inside `MessageList` container. `MessageList` container wraps around repeated message type (objects that are sometimes found in a `pb` definition) which for almost all purposes act like a python `list` object.
 
-2. Another limitation is the current dependency on TensorFlow library for converting `np.array` inputs to `tensor_proto` and vice-versa. Though, the code for the that can be divorced from the TensorFlow library, some dependencies are too long or complicated to trace back and support. Therefore, right now a simple adaptation of the code is used, where required. However, it does fallback on TensorFlow implementation if installed.
+2. Another limitation is the current dependency on TensorFlow library for converting `np.array` inputs to `tensor_proto` and vice-versa. Though, the code for the has been divorced from the TensorFlow library, some dependencies are too long or complicated to trace back and support. Therefore, right now a simple adaptation of the code is used, where required, falling back on the TensorFlow implementation if installed.
