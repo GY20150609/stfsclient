@@ -12,6 +12,6 @@ else:
     except ImportError:
         # Internal implementation
         from .tensor_util import make_ndarray, make_tensor_proto
-	    _TENSORFLOW_AVAILABLE = False
-
+        _TENSORFLOW_AVAILABLE = False
+        
 print("{}, using TF: {}".format(__name__, _TENSORFLOW_AVAILABLE))

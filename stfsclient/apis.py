@@ -130,10 +130,11 @@ class PredictRequest(Message):
     def inputs(self):
         return self._protobuf.inputs
 
+    # TODO: Add options for specifying dtype, shape, etc.
     @inputs.setter
-    def inputs(self, _dict_of_dicts):
-        for key, kwargs in _dict_of_dicts.items():
-            self._protobuf.inputs[key].CopyFrom(_make_tensor_proto(**kwargs))
+    def inputs(self, np_arr_dict):
+        for key, value in np_arr_dict.items():
+            self._protobuf.inputs[key].CopyFrom(make_tensor_proto(value))
         self.__set_in_parent__()
 
     # type: (repeated) string
@@ -180,7 +181,7 @@ class PredictResponse(Message):
     def parse_outputs(self):
         parsed_output_dict = dict()
         for key in self.outputs.keys():
-            parsed_output_dict.setdefault(key, _make_ndarray(self.outputs[key]))
+            parsed_output_dict.setdefault(key, make_ndarray(self.outputs[key]))
         return parsed_output_dict
 
     
