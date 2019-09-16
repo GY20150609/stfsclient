@@ -47,11 +47,12 @@ Refer here for the most up-to-date [tutorial.](./extras/tutorial/simple_tutorial
 
 ## Benchmark
 
+            The answer to the question **"Why use gRPC when TensorFlow Serving supports REST?"** 
 ![](./docs/latency_profile_mnist.png)
 
 ​      			Prediction latency on 10,000 images with batch sizes 1, 4, 8, and 16 on MNIST data set! :) 
 
-**Conclusion:** gRPC predict requests have a lot smaller latency profile and are approx. 6 times faster compared with REST based predict requests 
+This is why! gRPC predict requests have a lot smaller latency profile and are approx. 6 times faster compared with REST based predict requests 
 
 **Note:** Code for bench marking can be found at  [extras/benchmarks.](./extras/benchmarks)
 
