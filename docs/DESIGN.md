@@ -14,7 +14,7 @@
 I ask myself this now and then, so once for all, I'm putting it **down** in *mark____*.  ;P
 
 -  Working with `pb` should be simple. It is and it isn't. 
-- Tensorflow Serving provides documentation leaves implementation of the [gRPC client API](https://github.com/tensorflow/serving/tree/master/tensorflow_serving/apis), as an exercise for the user. Plus, there is little available, mostly sparse, reference for implementing the gRPC clients for TensorFlow Serving.
+- Tensorflow Serving provides [gRPC client API](https://github.com/tensorflow/serving/tree/master/tensorflow_serving/apis), but leaves implementation as an exercise for the user. Plus, there is little available, mostly sparse, reference for implementing the gRPC clients for TensorFlow Serving.
 
 The repo started as a by-product of working with Tensorflow Serving, mostly focusing on implementing a distributed serving mechanism for all models [Tensorflow](https://www.tensorflow.org/) and otherwise.
 
